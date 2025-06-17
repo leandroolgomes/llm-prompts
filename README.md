@@ -1,4 +1,4 @@
-# LLM Personas
+# LLM Prompts
 
 This repository contains personas that I use in several use cases.
 
