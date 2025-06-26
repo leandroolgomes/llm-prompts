@@ -339,8 +339,8 @@ flowchart TD
 ```mermaid
 flowchart TD
     Check[Verificação de Consistência] --> MemoryBank[Verificar Arquivos do Memory Bank]
-    MemoryBank --> TaskMagic[Verificar Estado do Task Planner]
-    TaskMagic --> Compare[Comparar Sistemas]
+    MemoryBank --> TaskPlanner[Verificar Estado do Task Planner]
+    TaskPlanner --> Compare[Comparar Sistemas]
     Compare --> Conflicts{Conflitos Encontrados?}
     
     Conflicts -->|Sim| Resolve[Resolver Conflitos]

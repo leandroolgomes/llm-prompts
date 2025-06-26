@@ -113,7 +113,7 @@ memory_bank_enabled: true
 detection_timestamp: "2024-01-15T10:30:00Z"
 detection_reason: "Projeto complexo com múltiplos recursos e decisões de arquitetura"
 detection_keywords: ["arquitetura", "sistema", "roadmap"]
-mode: "memory_bank"  # ou "task_magic_only"
+mode: "memory_bank"  # ou "task_planner_only"
 plan_hash: "abc123..."  # Para detectar mudanças no plano
 ```
 
@@ -250,17 +250,17 @@ flowchart TD
     AutoDetect --> ModeDecision{Modo Memory Bank?}
     
     ModeDecision -->|Sim| ReadMemoryBank[Ler TODOS os Arquivos do Memory Bank]
-    ModeDecision -->|Não| TaskMagicOnly[Modo Apenas Task Planner]
+    ModeDecision -->|Não| TaskPlannerOnly[Modo Apenas Task Planner]
     
     ReadMemoryBank --> CheckComplete{Arquivos do Memory Bank Completos?}
     CheckComplete -->|Não| CreateMissing[Criar Arquivos Faltantes]
     CheckComplete -->|Sim| EstablishContext[Estabelecer Contexto Completo]
     CreateMissing --> EstablishContext
     
-    TaskMagicOnly --> CheckTaskMagic[Verificar Estado do Task Planner]
-    EstablishContext --> CheckTaskMagic
+    TaskPlannerOnly --> CheckTaskPlanner[Verificar Estado do Task Planner]
+    EstablishContext --> CheckTaskPlanner
     
-    CheckTaskMagic --> CheckHistory[Revisar arquivos .github/ai/memory/]
+    CheckTaskPlanner --> CheckHistory[Revisar arquivos .github/ai/memory/]
     CheckHistory --> Ready[Pronto para Trabalhar]
 ```
 
