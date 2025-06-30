@@ -1,4 +1,4 @@
-# Optimize-Prompt - Documentação do Prompt
+# Optimize-Prompt
 
 Este documento descreve o prompt de otimização baseado no algoritmo ProTeGi (Otimização de Prompt com Gradientes Textuais).
 
